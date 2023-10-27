@@ -1,2 +1,2 @@
 # java_springboot_practise
-存储自己java联系的代码资料
+存储java_springboot_web练习的代码资料
