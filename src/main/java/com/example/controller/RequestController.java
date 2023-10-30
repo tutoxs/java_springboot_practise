@@ -2,9 +2,7 @@ package com.example.controller;
 import com.example.pojo.User;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -61,5 +59,25 @@ public class RequestController {
         return "ok";
     }
 
-    //  JSON
+    //    JSON格式参数
+    @RequestMapping("/jsonParams")
+    public String jsonParams(@RequestBody User user){
+        System.out.println(user);
+        return "ok";
+    }
+
+    //    路径参数
+    @RequestMapping("/pathParam/{id}")
+    public String pathParam(@PathVariable Integer id){
+        System.out.println(id);
+        return "ok"+id;
+    }
+
+    //    多个路径参数
+    @RequestMapping("/pathParams/{id}/{name}")
+    public String pathParams(@PathVariable Integer id,@PathVariable String name){
+        System.out.println(id);
+        System.out.println(name);
+        return "ok"+id+name;
+    }
 }
