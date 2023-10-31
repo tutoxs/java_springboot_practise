@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 public class EmpController {
-//    @RequestMapping("/listEmp")
+//     @RequestMapping("/listEmp")
 //    public Result list(){
 ////        1.加载并解析emp.xml
 //        String file =this.getClass().getClassLoader().getResource("emp.xml").getFile();
